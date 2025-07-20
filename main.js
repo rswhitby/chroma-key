@@ -16,7 +16,7 @@ const streams = {
 
 // ===== HLS Setup for all 4 overlays =====
 const hlsStreams = {
-  red: "https://0904ccf3f7d3.ngrok.app/live/red.m3u8",
+  red: "https://stream.mux.com/Td7vqpLabkUBJlA6w00Q9aa5CPGgi4IORorKEjLICTDU.m3u8",
   green: "https://0904ccf3f7d3.ngrok.app/live/green.m3u8",
   blue: "https://0904ccf3f7d3.ngrok.app/live/blue.m3u8",
   yellow: "https://0904ccf3f7d3.ngrok.app/live/yellow.m3u8",
