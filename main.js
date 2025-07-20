@@ -17,9 +17,9 @@ const streams = {
 // ===== HLS Setup for all 4 overlays =====
 const hlsStreams = {
   red: "https://stream.mux.com/Td7vqpLabkUBJlA6w00Q9aa5CPGgi4IORorKEjLICTDU.m3u8",
-  green: "https://0904ccf3f7d3.ngrok.app/live/green.m3u8",
-  blue: "https://0904ccf3f7d3.ngrok.app/live/blue.m3u8",
-  yellow: "https://0904ccf3f7d3.ngrok.app/live/yellow.m3u8",
+  green: "https://stream.mux.com/r2TlOi01L3QlHkNAQ00wsA3mWSx2iDOO8I1NtrlF3LUfQ.m3u8",
+  blue: "https://stream.mux.com/yjwOhbdvbQhd2dejZsrOrS2F00At01zpSow3BJYchU7vQ.m3u8",
+  yellow: "https://stream.mux.com/g00DWGCoz02YMASwERCbRvKDVbdKehBsP8sL02i4KZIGBY.m3u8",
 };
 
 for (const color in streams) {
