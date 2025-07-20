@@ -1,12 +1,18 @@
+#controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px;
+}
+
 #controls button {
+  width: 60px;
+  height: 60px;
   border: none;
-  border-radius: 999px;
-  padding: 10px 20px;
-  margin: 8px;
-  color: white;
-  font-size: 16px;
+  border-radius: 50%;
+  font-size: 0; /* hides text if you want only color */
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #controls button.red {
@@ -23,10 +29,9 @@
 
 #controls button.yellow {
   background-color: #f4a261;
-  color: black;
 }
 
 #controls button.active {
   transform: scale(1.1);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
