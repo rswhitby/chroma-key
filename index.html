@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chroma Key App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1. Camera feed (hidden) -->
+    <video
+      id="video-cam"
+      autoplay
+      playsinline
+      muted
+      style="visibility: hidden; width: 1px; height: 1px"
+    ></video>
+
+    <!-- 2. Overlay streams -->
+    <video
+      id="video-red"
+      loop
+      playsinline
+      style="display: none"
+    ></video>
+    <video
+      id="video-green"
+      src="videos/green.mp4"
+      loop
+      muted
+      playsinline
+      style="display: none"
+    ></video>
+    <video
+      id="video-blue"
+      src="videos/blue.mp4"
+      loop
+      muted
+      playsinline
+      style="display: none"
+    ></video>
+    <video
+      id="video-yellow"
+      src="videos/yellow.mp4"
+      loop
+      muted
+      playsinline
+      style="display: none"
+    ></video>
+
+    <!-- 3. Compositing canvas -->
+    <canvas id="output"></canvas>
+
+    <!-- 4. Chroma key controls -->
+    <div id="controls">
+      <button data-color="red">Red</button>
+      <button data-color="green">Green</button>
+      <button data-color="blue">Blue</button>
+      <button data-color="yellow">Yellow</button>
+    </div>
+
+    <!-- 5. Main application script -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
