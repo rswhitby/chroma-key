@@ -17,7 +17,7 @@ const streams = {
 // ===== HLS Setup for all 4 overlays =====
 const hlsStreams = {
   red: "https://stream.mux.com/qbmLFMnR6yLLVQNDWxTd00xtWe00Prw02009Z01brhf4U8QE.m3u8",
-  green: "https://stream.mux.com/r2TlOi01L3QlHkNAQ00wsA3mWSx2iDOO8I1NtrlF3LUfQ.m3u8",
+  green: "https://stream.mux.com/3szftA95p4XgdnVx7kkj7OVkw28Ya9xj3Ps4eJsGziE.m3u8",
   blue: "https://stream.mux.com/yjwOhbdvbQhd2dejZsrOrS2F00At01zpSow3BJYchU7vQ.m3u8",
   yellow: "https://stream.mux.com/g00DWGCoz02YMASwERCbRvKDVbdKehBsP8sL02i4KZIGBY.m3u8",
 };
