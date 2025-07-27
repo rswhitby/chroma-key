@@ -1,37 +1,67 @@
+/* style.css */
+
+/* Full‑screen reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+/* Canvas as your “screen” */
+#output {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Control buttons centered at top */
 #controls {
+  position: absolute;
+  top: 1rem; left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin: 20px;
+  gap: 1rem;
+  z-index: 2;
 }
 
 #controls button {
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   border: none;
   border-radius: 50%;
-  font-size: 0; /* hides text if you want only color */
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0.8;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+#controls button:hover { opacity: 1; transform: scale(1.1); }
+#controls button.active { box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+
+/* Color‑code the buttons */
+#controls button[data-color="red"]    { background-color: #ff0015; }
+#controls button[data-color="green"]  { background-color: #3cff00; }
+#controls button[data-color="blue"]   { background-color: #0044ff; }
+#controls button[data-color="yellow"] { background-color: #fbff00; }
+
+/* Hide only the overlay <video> elements */
+#video-red,
+#video-green,
+#video-blue,
+#video-yellow {
+  display: none;
 }
 
-#controls button.red {
-  background-color: #e63946;
-}
-
-#controls button.green {
-  background-color: #2a9d8f;
-}
-
-#controls button.blue {
-  background-color: #457b9d;
-}
-
-#controls button.yellow {
-  background-color: #f4a261;
-}
-
-#controls button.active {
-  transform: scale(1.1);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+/* Keep the camera <video> playing, but invisible */
+#video-cam {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 1px;
+  z-index: -1;
 }
