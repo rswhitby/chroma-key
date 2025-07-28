@@ -48,12 +48,19 @@ html, body {
 #controls button[data-color="blue"]   { background-color: #0044ff; }
 #controls button[data-color="yellow"] { background-color: #fbff00; }
 
-/* Hide only the overlay <video> elements */
+
+/* Keep overlay videos playing, but hide them off-screen */
 #video-red,
 #video-green,
 #video-blue,
 #video-yellow {
-  display: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Keep the camera <video> playing, but invisible */
