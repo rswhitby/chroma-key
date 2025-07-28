@@ -17,9 +17,11 @@ const streams = {
 // ===== HLS Setup for all 4 overlays =====
 const hlsStreams = {
   red: "https://stream.mux.com/qbmLFMnR6yLLVQNDWxTd00xtWe00Prw02009Z01brhf4U8QE.m3u8",
-  green: "https://stream.mux.com/3szftA95p4XgdnVx7kkj7OVkw28Ya9xj3Ps4eJsGziE.m3u8",
+  green:
+    "https://stream.mux.com/3szftA95p4XgdnVx7kkj7OVkw28Ya9xj3Ps4eJsGziE.m3u8",
   blue: "https://stream.mux.com/yjwOhbdvbQhd2dejZsrOrS2F00At01zpSow3BJYchU7vQ.m3u8",
-  yellow: "https://stream.mux.com/g00DWGCoz02YMASwERCbRvKDVbdKehBsP8sL02i4KZIGBY.m3u8",
+  yellow:
+    "https://stream.mux.com/g00DWGCoz02YMASwERCbRvKDVbdKehBsP8sL02i4KZIGBY.m3u8",
 };
 
 for (const color in streams) {
@@ -33,12 +35,14 @@ for (const color in streams) {
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
       video.muted = true;
       video.playsInline = true;
+      video.play().catch(console.warn); // ← ensure it starts decoding
     });
   } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
     video.src = hlsUrl;
     video.addEventListener("loadedmetadata", () => {
       video.muted = true;
       video.playsInline = true;
+      video.play().catch(console.warn); // ← ensure it starts decoding
     });
   }
 }
@@ -81,14 +85,13 @@ buttons.forEach((btn) => {
   });
 });
 
-/*
 // 6. Kick off playback for all overlays (muted + playsinline)
-Object.values(streams).forEach((v) => {
-  v.muted = true;
-  v.playsInline = true;
-  v.addEventListener("loadeddata", () => v.play().catch(console.warn));
+Object.values(streams).forEach((vid) => {
+  vid.muted = true;
+  vid.playsInline = true;
+  vid.loop = true;
+  vid.play().catch(console.warn); // ← start decoding right away
 });
-*/
 
 // 7. Start the camera feed
 navigator.mediaDevices
