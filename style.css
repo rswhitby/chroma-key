@@ -45,7 +45,7 @@ html, body {
 /* Color‑code the buttons */
 #controls button[data-color="red"]    { background-color: #ff0015; }
 #controls button[data-color="green"]  { background-color: #3cff00; }
-#controls button[data-color="blue"]   { background-color: #b700ff; }
+#controls button[data-color="blue"]   { background-color: #0011ff; }
 #controls button[data-color="yellow"] { background-color: #fbff00; }
 
 
