@@ -55,11 +55,11 @@ html, body {
 #video-blue,
 #video-yellow {
   position: absolute;
-  top: -9999px;
-  left: -9999px;
+  top: 0;
+  left: 0;
   width: 1px;
   height: 1px;
-  opacity: 0;
+  opacity: 0;      /* invisible but still decoded */
   pointer-events: none;
 }
 
