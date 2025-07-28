@@ -20,10 +20,10 @@ html, body {
   z-index: 1;
 }
 
-/* Control buttons centered at bottom */
+/* Control buttons centered at top */
 #controls {
   position: absolute;
-  bottom: 1rem; left: 50%;
+  top: 1rem; left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 1rem;
