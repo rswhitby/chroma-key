@@ -16,10 +16,10 @@ const streams = {
 
 // 3. HLS URLs
 const hlsStreams = {
-  red:    "https://stream.mux.com/qbmLFMnR6yLLVQNDWxTd00xtWe00Prw02009Z01brhf4U8QE.m3u8",
-  green:  "https://stream.mux.com/3szftA95p4XgdnVx7kkj7OVkw28Ya9xj3Ps4eJsGziE.m3u8",
-  blue:   "https://stream.mux.com/00X02iElluPmjN2FXO4JOnKW2weV3EhP018PDnfeMsKXCE.m3u8",
-  yellow: "https://stream.mux.com/ktMc1XWr2HpKRsd7S5BtVsXK3pEF4zL01LPSukXvaD01k.m3u8",
+  red:    "http://50.212.139.137/out.m3u8",
+  green:  "http://50.212.139.137/green.m3u8",
+  blue:   "http://50.212.139.137/blue.m3u8",
+  yellow: "http://50.212.139.137/yellow.m3u8",
 };
 
 // 4. Initialize Hls.js on each overlay
