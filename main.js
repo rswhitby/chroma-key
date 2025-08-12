@@ -16,7 +16,7 @@ const streams = {
 
 // 3. HLS URLs
 const hlsStreams = {
-  red:    "https://stream1.ovationav.com/hls://192.168.78.89/red.m3u8",
+  red:    "https://stream1.ovationav.com/red.m3u8",
   green:  "https://stream.mux.com/hwVrqOk3HFBHKJu01DEYNYu7Pre5DwczAnbOCvBY6oxo.m3u8",
   blue:   "https://stream1.ovationav.com/blue.m3u8",
   yellow: "https://stream1.ovationav.com/yellow.m3u8",
