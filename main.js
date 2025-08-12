@@ -26,11 +26,12 @@ const streams = {
 
 // ----- your HLS URLs -----
 const hlsStreams = {
-  red:    "https://stream1.ovationav.com/red.m3u8",
-  green:  "https://stream.mux.com/hwVrqOk3HFBHKJu01DEYNYu7Pre5DwczAnbOCvBY6oxo.m3u8",
-  blue:   "https://stream1.ovationav.com/blue.m3u8",
-  yellow: "https://stream1.ovationav.com/yellow.m3u8",
+  red: "https://stream.mux.com/KtpDUWnzBLkuBy6x2LNsnfGfMuL8n02EY3vwd8ySCoAQ.m3u8",
+  green: "https://stream.mux.com/J01dKLQObHWBU9ex00kK5p00OT2MHFi5sXJum1wwLWTwRg.m3u8",
+  blue: "https://stream.mux.com/hwVrqOk3HFBHKJu01DEYNYu7Pre5DwczAnbOCvBY6oxo.m3u8",
+  yellow: "https://stream.mux.com/qAJ01jpHaXsLFRt7NDjfOboj3pOiZ5h5SHk6pKNt51tI.m3u8",
 };
+
 
 // ----- init HLS on each overlay -----
 Object.entries(streams).forEach(([color, video]) => {
