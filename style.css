@@ -49,8 +49,16 @@ body {
 }
 
 #controls button.active {
-  /* box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); */
-  border: 5px solid white;
+  border: 2px solid white;                /* clean white border */
+  box-shadow: 0 0 8px white, 0 0 16px white; /* soft white glow */
+  opacity: 1;                              /* full brightness */
+  transform: scale(1.15);                  /* slightly bigger */
+  animation: pulse 1.2s infinite alternate;/* gentle breathing */
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1.15); box-shadow: 0 0 8px white, 0 0 16px white; }
+  100% { transform: scale(1.25); box-shadow: 0 0 12px white, 0 0 24px white; }
 }
 
 /* Color‑code the buttons */
