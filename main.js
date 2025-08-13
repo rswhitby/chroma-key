@@ -2,7 +2,7 @@
 
 // ----- orientation handling -----
 let rotateOverlays = false;             // rotate overlays when device is landscape
-const ROTATE_DEG_ON_LANDSCAPE = 0;     // flip to -90 if rotation is wrong on your phone
+const ROTATE_DEG_ON_LANDSCAPE = 90;     // flip to -90 if rotation is wrong on your phone
 
 function updateOrientationFlag() {
   rotateOverlays = window.innerWidth > window.innerHeight; // true when landscape
