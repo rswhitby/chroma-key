@@ -5,7 +5,8 @@ let rotateOverlays = True;             // rotate overlays when device is landsca
 const ROTATE_DEG_ON_LANDSCAPE = 90;     // flip to -90 if rotation is wrong on your phone
 
 function updateOrientationFlag() {
-  rotateOverlays = window.innerWidth > 1; // true when landscape
+  //rotateOverlays = window.innerWidth > window.innerHeight; // true when landscape
+  rotateOverlays = True;
 }
 window.addEventListener('resize', updateOrientationFlag);
 window.addEventListener('orientationchange', updateOrientationFlag);
