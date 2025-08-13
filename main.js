@@ -1,21 +1,13 @@
 // main.js
 
-// ----- orientation handling -----
-let rotateOverlays = false;             // rotate overlays when device is landscape
-const ROTATE_DEG_ON_LANDSCAPE = 90;     // flip to -90 if rotation is wrong on your phone
-
-function updateOrientationFlag() {
-  rotateOverlays = window.innerWidth > window.innerHeight; // true when landscape
-}
-window.addEventListener('resize', updateOrientationFlag);
-window.addEventListener('orientationchange', updateOrientationFlag);
-updateOrientationFlag();
-
 // ----- elements -----
 const videoCam = document.getElementById("video-cam");
 const canvas   = document.getElementById("output");
 const ctx      = canvas.getContext("2d");
 const buttons  = document.querySelectorAll("#controls button");
+
+// Always rotate overlays by this angle (90 or -90). Set to 0 to disable.
+const OVERLAY_ROTATE_DEG = 90;
 
 const streams = {
   red:    document.getElementById("video-red"),
@@ -140,7 +132,8 @@ function renderFrame() {
   drawVideoCover(ctx, videoCam, canvas.width, canvas.height, 0);
 
   // 2) composite enabled overlays; rotate when landscape
-  const overlayRotate = rotateOverlays ? ROTATE_DEG_ON_LANDSCAPE : 0;
+  const overlayRotate = OVERLAY_ROTATE_DEG;  // always rotate by fixed angle
+  
   for (const color in enabled) {
     if (enabled[color]) applyChroma(streams[color], thresholds[color], overlayRotate);
   }
