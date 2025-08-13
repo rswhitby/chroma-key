@@ -1,7 +1,8 @@
 /* style.css */
 
 /* Full‑screen reset */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -13,7 +14,8 @@ html, body {
 /* Canvas as your “screen” */
 #output {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -23,7 +25,8 @@ html, body {
 /* Control buttons centered at bottom */
 #controls {
   position: absolute;
-  bottom: 1rem; left: 50%;
+  bottom: 1rem;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 1rem;
@@ -39,14 +42,33 @@ html, body {
   opacity: 0.8;
   transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
 }
-#controls button:hover { opacity: 1; transform: scale(1.1); }
-#controls button.active { box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+
+#controls button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#controls button.active {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  border: 3px solid white;
+}
 
 /* Color‑code the buttons */
-#controls button[data-color="red"]    { background-color: #ff0015; }
-#controls button[data-color="green"]  { background-color: #3cff00; }
-#controls button[data-color="blue"]   { background-color: #0011ff; }
-#controls button[data-color="yellow"] { background-color: #fbff00; }
+#controls button[data-color="red"] {
+  background-color: #ff0015;
+}
+
+#controls button[data-color="green"] {
+  background-color: #3cff00;
+}
+
+#controls button[data-color="blue"] {
+  background-color: #0011ff;
+}
+
+#controls button[data-color="yellow"] {
+  background-color: #fbff00;
+}
 
 
 /* Keep overlay videos playing, but hide them off-screen */
@@ -59,7 +81,8 @@ html, body {
   left: 0;
   width: 1px;
   height: 1px;
-  opacity: 0;      /* invisible but still decoded */
+  opacity: 0;
+  /* invisible but still decoded */
   pointer-events: none;
 }
 
