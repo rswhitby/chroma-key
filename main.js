@@ -16,7 +16,7 @@ const streams = {
   yellow: document.getElementById("video-yellow"),
 };
 
-
+/*
 // ----- your HLS URLs -----
 const hlsStreams = {
   red: "https://stream.mux.com/KtpDUWnzBLkuBy6x2LNsnfGfMuL8n02EY3vwd8ySCoAQ.m3u8",
@@ -25,15 +25,15 @@ const hlsStreams = {
   yellow: "https://stream.mux.com/qAJ01jpHaXsLFRt7NDjfOboj3pOiZ5h5SHk6pKNt51tI.m3u8",
 };
 
-/*
+*/
 // ----- your HLS URLs -----
 const hlsStreams = {
-  red: "https://stream1.ovationav.com/red.m3u8",
-  green: "https://stream1.ovationav.com/green.m3u8",
-  blue: "https://stream1.ovationav.com/blue.m3u8",
-  yellow: "https://stream1.ovationav.com/yellow.m3u8",
+  red: "https://stream2.ovationav.com/red.m3u8",
+  green: "https://stream2.ovationav.com/green.m3u8",
+  blue: "https://stream2.ovationav.com/blue.m3u8",
+  yellow: "https://stream2.ovationav.com/yellow.m3u8",
 };
-*/
+
 // ----- init HLS on each overlay -----
 Object.entries(streams).forEach(([color, video]) => {
   video.crossOrigin = "anonymous";
