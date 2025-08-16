@@ -182,7 +182,7 @@ function applyChroma(srcVideo, t, rotateDeg) {
 // ----- thresholds (unchanged) -----
 const thresholds = {
   red:    { hMin:340, hMax:15,  sMin:0.4, sMax:1, vMin:0.3, vMax:1 },
-  green:  { hMin:110,  hMax:150, sMin:0.4, sMax:1, vMin:0.3, vMax:1 },
+  green:  { hMin:110,  hMax:170, sMin:0.4, sMax:1, vMin:0.3, vMax:1 },
   blue:   { hMin:210, hMax:240, sMin:0.4, sMax:1, vMin:0.3, vMax:1 },
   yellow: { hMin:25,  hMax:60,  sMin:0.4, sMax:1, vMin:0.3, vMax:1 },
 };
