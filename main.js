@@ -17,7 +17,7 @@ const streams = {
 };
 
 /*
-// ----- your HLS URLs -----
+// ----- VOD HLS URLs -----
 const hlsStreams = {
   red: "https://stream.mux.com/KtpDUWnzBLkuBy6x2LNsnfGfMuL8n02EY3vwd8ySCoAQ.m3u8",
   green: "https://stream.mux.com/J01dKLQObHWBU9ex00kK5p00OT2MHFi5sXJum1wwLWTwRg.m3u8",
@@ -26,7 +26,7 @@ const hlsStreams = {
 };
 
 */
-// ----- your HLS URLs -----
+// ----- LIVE HLS URLs -----
 const hlsStreams = {
   red: "https://stream2.ovationav.com/red.m3u8",
   green: "https://stream2.ovationav.com/green.m3u8",
